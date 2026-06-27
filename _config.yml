@@ -12,6 +12,9 @@ baseurl: "/aishabluebear"
 
 permalink: /news/:title/
 
+# Publish posts dated today even if the timestamp is later than the build time.
+future: true
+
 # A "soon" banner shown site-wide. Empty string hides it.
 banner: "Soon: Prologue 2 and the first episode of Runaways! ~"
 
