@@ -1,0 +1,41 @@
+title: Aisha Bluebear's Portfolio
+tagline: Catch up on my latest stories!
+description: >-
+  Stories, games, and episodes by Aisha Bluebear, including Space Pals! and
+  more, built with CodeSpark.
+author: Aisha Bluebear
+
+# For the GitHub Pages preview the site lives under /aishabluebear.
+# At cutover to the custom domain, set `baseurl: ""` and add the CNAME file.
+url: "https://netguy204.github.io"
+baseurl: "/aishabluebear"
+
+permalink: /news/:title/
+
+# A "soon" banner shown site-wide. Empty string hides it.
+banner: "Soon: Prologue 2 and the first episode of Runaways! ~"
+
+# CodeSpark profile / call to action (optional)
+codespark_label: "Play on CodeSpark"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+collections_dir: .
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+sass:
+  style: compressed

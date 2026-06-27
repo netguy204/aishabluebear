@@ -1,0 +1,20 @@
+---
+layout: default
+title: News
+permalink: /news/
+body_class: page-news
+---
+{% assign posts = site.posts | sort: 'date' | reverse %}
+
+<section class="news-header wrap">
+  <h1>News</h1>
+  <p>Every story, episode, and game, newest first.</p>
+</section>
+
+<section class="wrap">
+  <div class="card-grid">
+    {% for post in posts %}
+    {% include card.html post=post %}
+    {% endfor %}
+  </div>
+</section>

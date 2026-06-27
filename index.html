@@ -1,0 +1,31 @@
+---
+layout: default
+body_class: page-home
+---
+{% assign posts = site.posts | sort: 'date' | reverse %}
+{% assign latest = posts | slice: 0, 3 %}
+
+<section class="hero wrap">
+  <div class="hero__text">
+    <h1 class="hero__title">Catch up on<br><em>my latest</em><br>stories!</h1>
+    <p class="hero__sub">Check out all my latest episodes, like <strong>Space Pals!</strong> and How the Story Began, and Awesome New Games, and everything else.</p>
+    <p class="hero__actions">
+      <a class="btn" href="{{ '/news/' | relative_url }}">See the stories</a>
+    </p>
+  </div>
+  <div class="hero__art">
+    <img src="{{ '/assets/images/hero.webp' | relative_url }}" alt="A Space Pals character" loading="eager">
+  </div>
+</section>
+
+<section class="latest wrap">
+  <div class="latest__head">
+    <h2>Latest stories</h2>
+    <a class="latest__all" href="{{ '/news/' | relative_url }}">View all →</a>
+  </div>
+  <div class="card-grid">
+    {% for post in latest %}
+    {% include card.html post=post %}
+    {% endfor %}
+  </div>
+</section>

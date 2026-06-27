@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">Aisha Bluebear's Portfolio</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/news/' | relative_url }}"{% if page.url contains "news" %} aria-current="page"{% endif %}>News</a>
+    </nav>
+  </div>
+</header>
+{% if site.banner and site.banner != "" %}
+<div class="banner" role="status">
+  <div class="banner__track">
+    <span>{{ site.banner }}</span>
+    <span aria-hidden="true">{{ site.banner }}</span>
+    <span aria-hidden="true">{{ site.banner }}</span>
+  </div>
+</div>
+{% endif %}
