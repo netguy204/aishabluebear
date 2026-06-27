@@ -15,15 +15,22 @@ title: "My New Story"
 date: 2026-04-01 12:00:00
 image: /assets/images/my-new-story.webp
 image_alt: "Short description of the picture"
+caption: "A caption shown under the image."
 link: "https://codespark.com/play/?a=story&p=XXXXXXXXX"
 ---
-A sentence or two describing the story.
+The teaser: a sentence or two describing the story. Shows above the image and
+on the News cards.
 ```
 
+The **teaser** (the body text below the `---`) and the **caption** (the `caption:`
+field) are kept separate: the teaser appears above the image and on the News cards,
+while the caption appears in italics directly under the image.
+
 1. Put the picture in [`assets/images/`](assets/images/) and point `image:` at it.
-2. `link:` is the CodeSpark "Watch now" link (optional — leave it out for a post with
-   no link).
-3. Commit the file. GitHub rebuilds the site automatically in ~1 minute.
+2. `caption:` is optional — leave it out for a post with no image caption.
+3. `link:` is the CodeSpark "Watch now" link (optional — leave it out for a post with
+   no link). You can also link words inside the teaser with `[words](https://...)`.
+4. Commit the file. GitHub rebuilds the site automatically in ~1 minute.
 
 You can do all of this from GitHub's website (**Add file → Create new file**) — no
 tools to install.

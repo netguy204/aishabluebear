@@ -137,10 +137,15 @@ img { max-width: 100%; height: auto; display: block; }
 .post__header { margin-bottom: 22px; }
 .post__date { color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .85rem; margin: 0 0 8px; }
 .post__title { font-size: clamp(2.2rem, 1.6rem + 3vw, 3.4rem); margin: 0; }
+.post__teaser { font-size: 1.3rem; line-height: 1.5; margin: 0 0 28px; }
+.post__teaser p { margin: 0 0 0.6em; }
+.post__teaser p:last-child { margin-bottom: 0; }
 .post__figure { margin: 0 0 28px; }
 .post__figure img { border-radius: var(--radius); box-shadow: var(--shadow); border: 5px solid #fff; width: 100%; }
-.post__body { font-size: 1.2rem; }
-.post__body p { margin: 0 0 1em; }
+.post__caption {
+  font-family: var(--serif); font-style: italic; color: var(--muted);
+  font-size: 1.05rem; line-height: 1.4; text-align: center; margin: 14px auto 0; max-width: 90%;
+}
 .post__cta { margin: 28px 0 8px; }
 
 .post__nav { display: flex; justify-content: space-between; gap: 16px; margin: 48px 0 28px; border-top: 1px solid var(--line); padding-top: 24px; }
