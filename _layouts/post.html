@@ -1,14 +1,9 @@
 ---
 layout: default
 ---
-{% assign posts = site.posts | sort: 'date' %}
-{% for p in posts %}
-  {% if p.url == page.url %}
-    {% assign idx = forloop.index0 %}
-  {% endif %}
-{% endfor %}
-{% assign prev = posts[idx | minus: 1] %}
-{% assign next = posts[idx | plus: 1] %}
+{% comment %} page.previous = older post, page.next = newer post {% endcomment %}
+{% assign prev = page.previous %}
+{% assign next = page.next %}
 
 <article class="post wrap">
   <header class="post__header">
@@ -35,7 +30,7 @@ layout: default
   {% endif %}
 
   <nav class="post__nav" aria-label="More stories">
-    {% if idx > 0 and prev %}
+    {% if prev %}
       <a class="post__nav-link post__nav-link--prev" href="{{ prev.url | relative_url }}">
         <span class="post__nav-dir">‹ Previous</span>
         <span class="post__nav-name">{{ prev.title }}</span>
