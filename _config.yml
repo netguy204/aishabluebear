@@ -5,10 +5,9 @@ description: >-
   more, built with CodeSpark.
 author: Aisha Bluebear
 
-# For the GitHub Pages preview the site lives under /aishabluebear.
-# At cutover to the custom domain, set `baseurl: ""` and add the CNAME file.
-url: "https://netguy204.github.io"
-baseurl: "/aishabluebear"
+# Live on the custom domain (apex). CNAME file holds the domain for GitHub Pages.
+url: "https://aishabluebear.com"
+baseurl: ""
 
 permalink: /news/:title/
 
